@@ -1,0 +1,465 @@
+num = 1/0
+
+
+
+
+
+
+
+
+10 + 'ae'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lista = [1,2,3]
+print(lista[4])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dicionario = {1:"item 1", 2:"item 2"}
+print(dicionario[5])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+media = 9.0
+if (media > 8):
+    print("aprovado")
+else    
+    print("reprovado")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+while True print("Hello World")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4 + spam*3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print('2' + 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(2 + '2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(math.sqrt(2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import math
+print(math.sqrt(-2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("Abrindo um arquivo!")
+open("texto.txt", "r")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import math
+num = -2
+try:
+    result = math.sqrt(num)
+    print("A raiz quadrada", result)
+except Exception:
+    print("Não existe raiz quadrada de número negativo")    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import math
+num = -2
+try:
+    result = math.sqrt(num)
+    print("A raiz quadrada", result)
+except ValueError:
+    num = -num
+    print("Transformando número negativo em positivo")    
+    result = math.sqrt(num)
+    print("A raiz quadrada", result)
+
+
+
+
+
+
+
+
+
+
+try:
+    x = int(input("Enter number: "))
+    x = x + 1
+    print(x)
+except:
+    print("Invalid input")
+
+
+
+
+
+
+
+
+
+try:
+    x = int(input("Enter number: "))
+    x = x + 1
+    print(x)
+except:
+    print("Invalid input")
+finally:
+    print("Valid input")
+
+
+
+
+
+
+
+
+
+
+def dividir(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print("Division by zero!")   
+    else:
+        print("Result is", result)
+
+
+dividir(2, 2)
+
+
+
+
+
+
+
+
+def Divide():
+    try:
+        num1 = int(input("Primeiro num: "))
+        num2 = int(input("Segundo num: "))
+        result = num1 / num2
+        print("Divisão:", result)
+    except ValueError:
+        print("Dado informado inválido!")    
+    except ZeroDivisionError:
+        print("Divisão por zero!")    
+
+
+Divide()
+
+
+
+
+
+
+
+
+
+
+def Divide():
+    num1 = int(input("Primeiro num: "))
+    num2 = int(input("Segundo num: "))
+    result = num1 / num2
+    print("Divisão:", result)
+
+def VerificaDivisao():    
+    try:
+        Divide()
+    except ValueError:
+        print("Dado informado inválido!")    
+    except ZeroDivisionError:
+        print("Divisão por zero!")        
+
+VerificaDivisao()
+
+
+
+
+
+
+
+
+
+def ReadFile():
+    try:
+        print("Abrindo um Arquivo!")
+        open("texto.txt", "r")
+    except FileNotFoundError:
+     print("O Arquivo não existe!")
+
+
+ReadFile()    
+
+
+
+
+
+
+
+
+
+
+
+
+
+try:
+    print("Abrindo um arquivo!")
+    open("texto.txt", "r")
+except FileNotFoundError as captura:
+    print(captura)    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import os
+
+try:
+    os.remove("teste.txt")
+    print("Arquivo removido com sucesso!")
+except FileNotFoundError as e:
+    print("Erro:", e)
+    print("Aviso: Arquivo inexistente!")
+except PermissionError as e:
+    print("Erro:", e)
+    print("Sem permissão de acesso!")
+except IsADirectoryError as e:
+    print("Erro:", e)
+    print("Tentativa de remover um diretório!")
+
+
+
+
+
+
+
+
+import os
+
+try:
+    os.rename("teste_orig.txt", "teste_dest.txt")
+    print("Arquivo Renomeado!")
+except FileNotFoundError as erro:
+    print("Erro:", erro)
+    print("Aviso: Arquivo Inexistente!")
+except PermissionError as erro:
+    print("Erro:", erro)
+    print("Sem permissão de Acesso!")
+except FileExistsError as erro:
+    print("Erro:", erro)
+    print("Arquivo destino já existe!")
+
+
+
+
+
+
+
+
+
+import os
+
+try:
+    arquivos = os.scandir()
+    for obj in arquivos:
+        print(obj.name)
+        print(obj.path)
+        print(obj.is_dir())
+except FileNotFoundError:
+    print("Caminho não existe!")
+except NotADirectoryError:
+    print("O caminho não é diretório!")
